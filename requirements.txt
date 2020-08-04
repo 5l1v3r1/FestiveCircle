@@ -8,7 +8,7 @@ Django==2.2.5
 django-appconf==1.0.3
 django-geoip==0.5.2.1
 geoip2==2.9.0
-httplib2==0.17.0
+httplib2==0.18.0
 idna==2.8
 isort==4.3.21
 lazy-object-proxy==1.4.2
