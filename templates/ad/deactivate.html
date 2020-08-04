@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block script %}
+<link rel="stylesheet" type="text/css" href="{% static 'user/css/sign_up.css' %}">
+
+{% endblock%}
+
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center">
+  <form class="form-horizontal text-center col-xl-4 col-lg-5 col-md-7 col-sm-9 col-xs-2 signup-body" method='POST'>
+    {% csrf_token %}
+    <h3>Deactivate ad</h3>
+    <div class="text-left">
+      <label class="signup-text">
+        Are you sure you want to deactivate your ad?
+      </label>
+    </div>
+      <button type="submit" class="signup-button" style="background-color: #EA4335;">
+        Deactivate 
+      </button>
+  </form>
+</div>
+
+{% endblock content %}

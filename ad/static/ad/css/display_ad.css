@@ -1,0 +1,204 @@
+.crumbs{
+    height: 100px;
+    padding: 10px;
+}
+.crumbs h1{
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    display: inline;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #0774B8;
+}
+
+.ad-container{
+    margin: 0px;
+}
+.ad-container .right-container{
+    border: 1px solid #9E9E9E;
+    padding: 20px;
+}
+.ad-container .right-container h1{
+   color: #0774B8;
+   margin: 0px;
+}
+.ad-container .right-container label{
+    color: #000;
+    font-weight: 600;
+    font-size: 19px;
+ }
+
+ .ad-container .right-container  .image-container{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 350px;
+    
+ }
+ .ad-container .right-container  img{
+    width: 100%;
+    height: 100%;
+ }
+ .ad-container .right-container  .description-title{
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+ }
+
+ .ad-container .right-container  .description{
+    font-weight: 500;
+    font-size: 15px;
+    color: #515A5A;
+    margin: 0px;
+ }
+
+ .ad-container .right-container  .text-box{
+    padding:10px;
+    border: 1px solid #D0D3D4;
+ }
+
+ 
+ .ad-container .right-container  .text-box .text{
+    font-size: 15px;  
+    font-weight: 500;  
+    height: 50px;
+    margin: 0px;
+ }
+ .serv-text{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+ }
+
+ .ad-container .right-container .check-box  span{
+    font-size: 20px;  
+    font-weight: 600;
+    color: #039BE5;
+    padding: 1px;
+ }
+
+ .ad-container .right-container .cross-box  span{
+    font-size: 20px;  
+    font-weight: 600;
+    color: #F44336;
+    padding: 1px;
+ }
+
+ .ad-container .secondary-image-container{
+     width: 100%;
+     height: 65px;
+     padding-bottom: 5px;
+ }
+ .ad-container .secondary-image-container img{
+    width: 87px;
+    height: 100%;
+
+}
+.ad-container .right-container .services-container{
+    display: none !important;
+}
+.ad-container .left-container-top{
+    border: 1px solid #9E9E9E;
+    padding-top: 20px;
+    padding-bottom: 220px;
+    margin-bottom: 84px;
+} 
+.ad-container .left-container-bottom{
+    border: 1px solid #9E9E9E;
+    padding: 120px 20px 90px 20px;
+}
+.ad-container .left-container-bottom .tips span{
+   font-size: 18px;
+   color: #0774B8;
+   font-weight: 600;
+}
+.ad-container .left-container-bottom .tips{
+    font-size: 15px;
+    color: #272727;
+}
+
+.ad-container .left-container-bottom .tips .read-more{
+    font-size: 15px;
+    color: #F44336;
+}
+.ad-container .left-container-top .price{ 
+    font-size: 28px;
+    font-weight: 600;
+    border-bottom: 3px solid #F44336;
+    margin: 0px;
+}
+
+.ad-container .left-container-top .price span{ 
+    color: #F44336;
+}
+
+.ad-container .left-container-top .manage{ 
+    margin-top: 5px;
+    color: #0774B8;
+    font-weight: 400;
+}
+.ad-container .left-container-top .container-mid{
+    background: #B3E5FC;
+    padding-top: 20px;
+    
+}
+
+.ad-container .left-container-top .phone{
+    padding: 10px 10px 10px 10px;
+    margin: 20px;
+    background: #F44336;
+    border-radius: 5px;
+}
+.ad-container .left-container-top .phone label{
+    margin: 0px;
+    font-size: 15px;
+}
+
+.ad-container .left-container-top .message{
+    margin: 20px;
+   font-size: 18px;
+   font-weight: 500;
+   color: black;
+   border: 2px solid black;
+   border-radius: 5px;
+   padding: 7px 5px 7px 5px;
+
+}
+.ad-container .left-container-top .message label{
+    margin: 0px
+}
+
+.ad-container .left-container-top .fa-sms{
+    font-size: 28px;
+    color: #0774B8;
+ }
+ 
+
+.ad-container .left-container-top .phone label{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+.ad-container .left-container-top .container-mid .manage{
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    width: 80%;
+}
+
+.ad-container .left-container-top .container-mid .m1{
+    font-weight: 700;
+    font-size: 16px;
+    color: #F44336;
+    margin-top: 5px;
+}
+.ad-container .left-container-top .container-mid .fas{
+    font-size: 40px;
+    color: #FFCA28;
+}
+

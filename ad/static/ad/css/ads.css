@@ -1,0 +1,165 @@
+
+.top-nav{
+	margin-bottom: 0px !important;
+}
+.bottom-nav{
+	margin-bottom: 0px !important;
+}
+.logo{
+	padding: 0px !important;
+}
+.panel-order{
+	width: 85%;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.panel-order .top label{
+	color: #3949AB;
+    font-size: 35px;
+	font-weight: 600;
+	margin-bottom: 0px;
+	width: 50%;
+}
+.panel-order .row {
+	background-color:#FBFCFC;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	border: 1px solid #D0D3D4;
+	-webkit-box-shadow: 0px 0px 20px -2px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 20px -2px rgba(0,0,0,1);
+	box-shadow: 0px 0px 20px -2px rgba(0,0,0,1);
+}
+.panel-order .error-label {
+    font-size: 12px;
+    color: #FF3E30;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.panel-order .post-ad {
+	background-color: #FFA726;
+	padding: 10px 15px 10px 15px;
+	margin-top: 7px;
+	color: white !important;
+	border-radius: 4px;
+	font-size: 15px;
+	font-weight: 500;
+	text-decoration: none;
+}
+.panel-order .row img{
+	height: 63px;
+	width: 63px;
+	border-radius: 50%;
+	margin: 10px;
+	margin-left: 25px; margin-right: 15px;
+}
+.panel-order .row .img{
+	background-color: #ECF0F1;
+	border-right: 1px solid #D0D3D4;
+
+}
+.panel-order .row .title a{
+	margin-left: 20px;
+	margin-bottom: 0px;
+	font-size: 19px;
+	font-weight: 600;
+	color: black;
+	text-decoration: none;
+}
+.panel-order .row .status-1{
+padding-left: 5px;
+padding-right: 5px;
+}
+.panel-order .row .view-icon{
+	color: #1E88E5;
+	font-size: 18px;
+}
+.panel-order .row .view-number{
+	color: #1E88E5;
+	font-size: 15px;
+	font-weight: 400;
+}
+.panel-order .row .rating-icon{
+	color: #FFB300;
+	font-size: 18px;
+}
+.panel-order .row .rating-number{
+	color: #FFB300;
+	font-size: 15px;
+	font-weight: 400;
+}
+.panel-order .row .feature-icon{
+	color: #FF5722;
+	font-size: 18px;
+}
+.panel-order .row .feature-status{
+	color: #FF5722;
+	font-size: 15px;
+	font-weight: 400;
+}
+.panel-order .row .date i{
+	color: #EA4335;
+	font-size: 25px;
+}
+.panel-order .row .date .exp-date{
+	color: #EA4335;
+	font-size: 15px;
+	font-weight: 600;
+}
+.panel-order .row .views i{
+	color: #FFA726;
+	font-size: 17px;
+}
+.panel-order .row .views .view-number{
+	color: #FFA726;
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+.panel-order .row .status .Deactive{
+	color: white;
+	background-color: #DE4032;
+	padding: 3px 5px 3px 5px;
+	border-radius: 2px;
+	width: 90px;
+	font-weight: 400;
+}
+.panel-order .row .status .Active{
+	color: white;
+	background-color: #4285F4;
+	padding: 3px 5px 3px 5px;
+	border-radius: 2px;
+	width: 90px;
+	font-weight: 400;
+}
+.panel-order .row .options button{
+	background: none !important;
+	border: none !important;
+}
+.panel-order .row .options svg{
+	cursor: pointer;
+	background: none !important;
+	border: none !important;
+	height: 45px;	width: 45px;
+	padding: 2px;
+	overflow: hidden;
+    transition-duration: 0.9s;
+    transition-property: transform;
+}
+
+.panel-order .row .options svg:hover{	
+	background: none !important;
+	border: none !important;
+	transform: scale(1.2)
+}
+.panel-order .row .options .dropdown-menu {
+	margin-top: 0px;
+}
+.panel-order .row .options .dropdown-menu .dropdown-item{
+	border-radius: 2px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+.panel-order .row .options .dropdown-menu .dropdown-item:hover{
+	background-color: #1E88E5;
+	color: white;
+}

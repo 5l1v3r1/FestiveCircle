@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block script %}
+<link rel="stylesheet" type="text/css" href="{% static 'user/css/login.css' %}">
+
+{% endblock%}
+
+
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center">
+  <form class="form-horizontal text-center col-xl-4 col-lg-5 col-md-7 col-sm-9 col-xs-5 login-body" method='POST'>
+    {% csrf_token %}
+    <h3>Sign in to FestiveCircle</h3>
+
+    <a class="btn-fb" href="#"><span><i class="fab fa-facebook-f fa-lg mr-auto"></i></span>Continue with Facebook</a>
+
+    <a class="btn-google" href="{% url 'social:begin' 'google-oauth2' %}"><span><i
+          class="my-auto fab fa-google-plus-g fa-lg"></i></span>Continue with Google</a>
+
+
+    <div class="text-left">
+      <label class="signin-text">
+        Sign in using your registered account
+      </label>
+    </div>
+
+
+    <div class="justify-content-center">
+      <div class="form-group text-left mb-2">
+              
+        {% if messages %}
+          {% for message in messages%}
+            {% if message.tags == 'email error' %}
+              <label class="error-label"><i class="fas fa-times-circle mr-2"></i>{{message}}</label>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        <input class="input" name="email" type="email" placeholder="Email"
+        {% if messages %}
+        {% for message in messages%}
+          {% if message.tags == 'email info' %}
+            value="{{ message }}"
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+        >
+      </div>
+
+      <div class="form-group mb-1 text-left">
+       
+        {% if messages %}
+        {% for message in messages%}
+        {% if message.tags == 'password error' %}
+        <label class="error-label"><i class="fas fa-times-circle mr-2"></i>{{message}}</label>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        <input type="password" class="input" placeholder="Passowrd" name="password" >
+
+
+      </div>
+      <div class="text-left">
+      <lable class="staysinged-in">
+        <input class="pl-3 mr-1" type="checkbox" id="checkbox" name="remember me">
+        Stay signed in?
+      </lable>
+      </div>
+      <button type="submit" class="signin-button">
+        Sign In
+      </button>
+
+      <div class="text-center links-box">
+        <a href="{% url 'password_reset' %}" class="login-link">Forgot password?</a>
+        <a href="{% url 'register' %}" class="login-link">New here? Create a new account.</a href="#">
+      </div>
+
+    </div>
+  </form>
+
+
+
+</div>
+
+{% endblock content %}

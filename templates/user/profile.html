@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block script %}
+<link rel="stylesheet" type="text/css" href="{% static 'user/css/profile.css' %}">
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+{% endblock%}
+
+{% block content %}
+
+
+
+<div class="d-flex justify-content-center align-items-center">
+  <form class="col-lg-7 col-sm-12 text-center profile" method='POST' id="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-lg-3 col-sm-12 text-left p-0">
+        <h3>
+          My Profile
+        </h3>
+      </div>
+      <div class="col-lg-6 col-sm-12 text-center align-items-center">
+        <div class="thumb mr-auto ml-auto">
+          <img id="avatar" {% if URL %}  src="{{ URL }}" {% else %}
+        src="{% static 'user/images/avatar.png' %}"
+        {% endif %} alt="">
+      </div>
+      <div class="upload-img mt-4">
+        <input type="file" name="avatar" id="selectedFile" style="display: none;" onchange="Filevalidation()" />
+        <input class="upload-button" id="upload-button" type="button" value="Upload" onclick="document.getElementById('selectedFile').click();" />      </div>
+        {% if messages %}
+        {% for message in messages%}
+          {% if message.tags == 'image error' %}
+          <div class="mt-2"><label class="text-danger" id="server_file_label"><i class="fas fa-exclamation-circle"></i> {{ message }}</label></div>          
+          {% endif %}
+        {% endfor %}
+      {% endif %}  
+        <div class="mt-2"><label id="file_label"></label></div>
+      </div>
+  
+      <div class="col-lg-3 col-sm-12 p-0 text-right">
+        <a class="homepage" href="{% url 'home' %}"><span><i class="fas fa-home"></i></span> Go to homepage</a>
+        
+      </div>
+        
+    </div>
+          
+      <hr>
+      <div class="row text-center mt-2">
+        {% if messages %}
+        {% for message in messages%}
+          {% if message.tags == 'update info' %}
+          <div class="mr-auto ml-auto box col-12">
+            <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
+              <label class="update-success">{{ message }}</label>
+              
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div><br>          
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+        {% if Is_verified == False %}
+        
+        <div class="mr-auto ml-auto box col-12">
+          <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+            <label class="not-verified">Your email is not verified. An email with verification link has been sent to your email</label>
+            
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div><br>
+        {% endif %}
+        <div class="col-4 holder text-right my-auto">
+          <label>Email</label>
+        </div>
+        <div class="col-8 holder text-left my-auto">
+          <input id="profile-info" disabled name="fname" type="text" value="{{ Email }}" style="opacity: 0.7;">
+          
+        </div>
+        
+      </div>
+      
+      <div class="row text-center mt-2">
+        <aside class="col-4"></aside>
+        <div class="col-8 text-left">
+          {% if messages %}
+            {% for message in messages%}
+              {% if message.tags == 'name error' %}
+              <div><label class="text-danger" style="height: 20px"><i class="fas fa-exclamation-circle"></i> {{ message }}</label></div>          
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+        
+        <div class="col-4 holder text-right my-auto">
+          <label>Full Name</label>
+        </div>
+        <div class="col-8 holder text-left my-auto">
+          <input id="profile-info" name="full_name" type="text" value="{{ Name }}">
+          
+        </div>
+      </div>
+
+
+      
+
+
+      <div class="row text-center mt-2">
+        <div class="col-4 text-right my-auto">
+          <label>Country</label>
+        </div>
+        <div class="col-8 holder text-left my-auto">
+          <input id="profile-info" disabled name="country" type="text" value="{{ Country }}" style="opacity: 0.7;">
+          
+        </div>
+      </div>
+      
+      <div class="row text-center mt-2">
+        
+        <aside class="col-4"></aside>
+        <div class="col-8 text-left">
+          {% if messages %}
+            {% for message in messages%}
+              {% if message.tags == 'city error' %}
+              <div><label class="text-danger" style="height: 20px"><i class="fas fa-exclamation-circle"></i> {{ message }}</label></div>          
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+        <div class="col-4 holder my-auto">
+          <label>City</label>
+        </div>
+        <div class="col-8 holder text-left my-auto">
+          <select name="city">
+            {% if City %}
+            <option value="{{ City }}">{{ City }}</option>
+            {% endif %}
+            <hr>
+            <option value="Lahore">Lahore</option>
+            <option value="Karachi">Karachi</option>
+            <option value="Islamabad">Islamabad</option>
+          </select>
+          
+        </div>
+      </div>
+
+
+      <div class="row text-left mt-2">
+        <aside class="col-4"></aside>
+        <div class="col-8 text-left">
+          {% if messages %}
+          {% for message in messages%}
+          {% if message.tags == 'date error' %}
+          <div><label class="text-danger" style="height: 20px"><i class="fas fa-exclamation-circle"></i>
+              {{ message }}</label></div>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+        </div>
+        
+        
+        <div class="col-4 holder text-right my-auto">
+          <label>Date Of Birth</label>
+        </div>
+        <div class="col-8 holder text-left my-auto">
+          <input name="date_of_birth" data-format="dd-mm-yyyy" id="datepicker" width="288" 
+          {% if DOB != '--' %}
+            value="{{ DOB }}"
+          {% endif %} />
+          <script>
+            $('#datepicker').datepicker({
+              uiLibrary: 'bootstrap4'
+            });
+          </script>
+  
+        </div>
+      </div>
+  
+
+
+
+      <div class="row text-center mt-2">
+        <aside class="col-4"></aside>
+        <div class="col-8 text-left">
+          {% if messages %}
+          {% for message in messages%}
+          {% if message.tags == 'contact error' %}
+          <div><label class="text-danger" style="height: 20px"><i class="fas fa-exclamation-circle"></i>
+              {{ message }}</label></div>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+        </div>
+
+        <div class="col-4 holder text-right my-auto">
+          <label>Contact Number</label>
+        </div>
+        <div class="col-8 holder text-left my-auto">
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">+91</div>
+          </div>
+          <input id="inlineFormInputGroup" type="number" maxlength="10" minlength="10" name="phone_number" placeholder="XXX XXXXXXX" style="width:239px"
+          {% if Contact %}
+            value="{{ Contact }}"
+          {% endif %}
+          >
+        </div>
+          <!-- <a href="#" class="add-num">Add Number</a> -->
+        
+        </div>
+      </div>
+      {% if user.is_authenticated and not backends.associated %}
+
+      <div class="row text-center mt-2 mb-3">
+        <div class="col-4 holder text-right my-auto">
+          <label>Password</label>
+        </div>
+        <div class="col-8 holder text-left  my-auto">
+        <a href="{% url 'verify' %}" class="add-num">Update Password</a>
+        </div>
+      </div>
+
+      {% endif %}            
+
+    <hr>
+
+    <div class="form-group text-center pt-3">
+     
+
+      <button class="float-right save-button" type="submit"  >
+       Update
+      </button>
+
+    </div>
+  
+  </form>
+
+
+
+</div>
+<script>
+
+</script>
+
+
+<br>
+<br>
+{% endblock content %}
+
+{% block footscripts %}
+<script src="{% static 'user/js/input_validation.js' %}"></script>
+{% endblock footscripts %}

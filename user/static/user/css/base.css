@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Spartan:100,200,300&display=swap');
+#mainbody {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #fff;
+}
+.navbar{
+  -webkit-box-shadow: 0px 10px 21px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 21px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 21px 0px rgba(0,0,0,0.75);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5F6A6A;
+}
+
+/* Handle on hover */
+
+*:focus {
+  outline: none;
+} 
+
+.sticky {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 50px;
+}
+.nav-gradient{
+  background: #fff;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+
+
+.bottom-nav .bottom-nav-row .profile-img{
+  max-width: 55px; max-height: 55px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-right: 25px;
+  border-radius: 50%; 
+  cursor: pointer;
+  border: 2px solid #D5DBDB;
+}
+.bottom-nav .bottom-nav-row .user-name{
+  text-align: center;
+  color:  black;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+.bottom-nav .bottom-nav-row .login-link{
+  font-size: 20px;
+  color: #2A65EA;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.bottom-nav .bottom-nav-row .profile-img2{
+  max-width: 70px; max-height: 70px;
+  margin-right: 25px;
+  border-radius: 50%; 
+}
+.bottom-nav .bottom-nav-row .profile-info .one{
+ font-size: 14px;
+ margin: 0px;
+ color: grey;
+}
+.bottom-nav .bottom-nav-row .profile-info .two{
+  font-size: 14px;
+}
+.bottom-nav .bottom-nav-row .dropdown-menu{
+  border-radius: 0px;
+  min-width: 300px;
+  padding-top: 0px;
+  margin-right: -50px !important;
+}
+.bottom-nav .bottom-nav-row .dropdown-menu .row{
+  background-color: #FBFCFC;
+}
+.bottom-nav .bottom-nav-row .dropdown-menu .dropdown-item{
+  font-size: 17px;
+  font-weight: 500;
+}
+.bottom-nav .bottom-nav-row .dropdown-menu .dropdown-item:hover{
+  background: #E0F7FA;
+}
+
+.bottom-nav .bottom-nav-row .dropdown span i{
+  font-size: 15px;
+  padding-left: 7px;
+  color: 434343;
+}
+.bottom-nav {
+  background-color: #F7F8F9;
+}
+.bottom-nav .bottom-nav-row{
+  width: 100%;
+  margin: 0px 10px 0px 10px;
+  padding: 5px 10px 5px 10px !important;
+}
+.bottom-nav .bottom-nav-row .post-link{
+  background-color: #2A65EA;
+  padding: 12px;
+  border-radius: 1px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+.bottom-nav .bottom-nav-row .post-link:hover{
+  opacity: 0.9;
+}
+
+.bottom-nav .bottom-nav-row .logo{
+  max-width: 60px;
+  max-height: 60px;
+
+}
+#postbutton {
+    background-color: #EA4335;
+    border: none;
+    border-radius: 2px;
+    font-weight: bolder;
+    color: white;
+    height: 33px;
+    padding: 2px 15px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+#postbutton:hover {
+    background-color: #EF5350;
+    border-color: #EF5350;
+}
+
+#lowernav {
+    background-color: #17202A;
+    height: 60px;
+}
+
+#logo {
+    color: white;
+    padding: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Telex&display=swap');
+
+.festive-logo{
+  font-family: 'Telex', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  border-left: 2px solid #BDBDBD;
+  padding-left: 29px;
+  height: 35x;
+}
+
+#bottom {
+    background-color: #000000;
+}
+#p2 {
+    background-color: #000000;
+    text-decoration: underline;
+    font-size: 18px;
+}
+footer p{
+    padding-top: 15px;
+    font-size: 30px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style the search field */
+  form.example input[type=text] {
+    padding: 10px;
+    border: none;
+    height: 55px;
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    background: #B3E5FC;
+    border-bottom: 2px solid cornflowerblue;
+  }
+
+  /* Style the submit button */
+  form.example button {
+    float: left;      
+    width: 28%;
+    padding-top:7px ;
+    height: 55px;
+    border: none;
+    background: #3498DB;
+    color: black;
+    font-size: 16px;
+    font-weight: bolder;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    border-bottom: 2px solid cornflowerblue;
+  }
+  
+  form.example button:hover {
+    background: #03A9F4;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  #playstore-img {
+    width: 200px;
+    height: 80px;
+    padding: 2px;
+  }
+
+  #appstore-img {
+    width: 172px;
+    height: 55px;
+    padding: 2px;
+  }
+
+  #login-form, #signup-form {
+    background-color: #F5F5F5;
+    border: 0.02rem solid #1E88E5;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.41);
+  }
+  #login-text, #register-text {
+      color: #3949AB;
+      font-size: 23px;
+      font-weight: bolder;
+      text-decoration: bold;
+  }
+  #btn-google{
+    background-color: #FF3E30;
+    border-color: #FF3E30;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    text-decoration:none;
+    font-weight: normal;
+    display: inline-block;
+    font-size: 15px;
+  }
+  #btn-google:hover{
+    background-color:#EC7063;
+    color: white
+  }
+
+  #btn-fb{
+    background-color: #3B5998;
+    border-color: #3B5998;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    text-decoration: none;
+    font-weight: normal;
+    display: inline-block;
+    font-size: 15px;
+  }
+  #btn-fb:hover{
+    background-color:#8b9dc3;
+
+  }
+
+  #signin-text {
+    font-family: 'Spartan', sans-serif;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  #aboutme{
+    border: .04rem solid #E0E0E0;
+    border-radius: none;
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 100px;
+    font-weight: lighter;
+    font-size: 14px;
+  }
+  #email, #password, #firstname, #lastname, #gender, #dob, #address, #emailerror, #passworderror,
+  #confirm-password-error, #new-password-error, #recover-email-error {
+      border: .05rem solid #E0E0E0;
+      border-radius: 3px;
+      background-color: #EEEEEE;
+      width: 100%;
+      height: 45px;
+      font-weight: 500;
+      font-size: 15px;   
+      color: black;
+  }
+
+
+  #emailerror::placeholder, #passworderror::placeholder, #confirm-password-error::placeholder,
+  #new-password-error::placeholder, #recover-email-error::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+
+
+  #gender {
+      border: .05rem solid #E0E0E0;
+      border-radius: 3px;
+      background-color: #EEEEEE;
+      height: 45px;
+      color: #5F6A6A;
+      padding:5px 13px;
+}
+  input[type=date]:invalid::-webkit-datetime-edit {
+    color: #5F6A6A;
+}
+  #email:hover, #password:hover, #firstname:hover, 
+  #lastname:hover, #dob:hover, #gender:hover, #address:hover, #aboutme:hover{
+    border: 1px solid #ABB2B9;
+ }
+#email:active, #password:active, #dob:active, #firstname:active, 
+#lastname:active, #gender:active, #address:active, #aboutme:active{ 
+        border: 1px solid #CCD1D1;
+    }
+    #email:focus, #password:focus, #dob:focus, #firstname:focus, 
+    #lastname:focus, #gender:focus, #address:focus, #aboutme:focus{ 
+      border: 2px solid #1E88E5;
+  }
+
+    #staysingedin {
+      color: #000000;
+      font-size: 14px;
+      font-weight: 400;
+      font-size: 13px;
+      display: inline-block;
+      padding-left: 15px;
+      text-indent: -15px;
+      }
+    #checkbox {
+        width: 14px;
+        height: 14px;
+        margin-left:2px;
+        vertical-align: bottom;
+        position: relative;
+        top: -4px;
+        *overflow: hidden;
+      }
+
+      #signin-button{
+        background-color: #7CB342;
+        border-color: #7CB342;
+        border: 0px;
+        border-radius: 3px;
+        color: white;
+        width: 50%;
+        height: 45px;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 17px;
+        display: inline-block;
+      }
+
+      #signin-button:hover{
+        background-color: #9CCC65;
+      }
+
+      #login-link {
+          color: black;
+          font-size: 14px;
+          font-weight: 400;
+          text-decoration: underline;
+      }
+      #login-link:hover {
+        color: blue;
+    }
+    .ico{
+      color:black;
+    }
+    .ico:hover{
+      color:#808B96;
+    }
+    hr {
+      border: none;
+    height: 100px;
+    }
+    #footertext{
+      color: #707B7C;
+      font-size: 14px;
+    }
+
+    #socialico{
+      font-size: 3rem;
+      color: white;
+    }
+    #socialico:hover{
+      color: #808B96;
+    }
+    #footerlink{
+      color: #707B7C;
+    }
+    #footerlink:hover{
+      text-decoration: underline;
+    }
+
+    #dropdown:hover>.dropdown-menu {
+      display: block;
+    }
+    
+    #dropdown>.dropdown-toggle:active {
+      /*Without this, clicking will make it sticky*/
+        pointer-events: none;
+    }

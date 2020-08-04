@@ -1,0 +1,126 @@
+.signup-body{
+    border: 1px solid #1D59AA;
+    background-color: #FDFEFE;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.41);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px 60px 50px 60px !important;
+}
+
+.signup-body h3{
+    color: #3949AB;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.signup-body .signup-text{
+    color: #272324;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 20px;
+}
+.signup-body .input{
+    outline: 1px solid transparent;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 45px;
+    font-weight: 500;
+    font-size: 15px;   
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
+.signup-body .input:focus{
+    border: 1px solid #ABB2B9;
+}
+.signup-body .input-error{
+    border: 2px solid #FF3E30;
+    color: #FF3E30;
+    border-radius: 3px;
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 45px;
+    font-weight: 500;
+    font-size: 15px;   
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
+.signup-body .input-error:hover{
+    border: 2px solid #FF3E30;
+}
+.signup-body .error-label {
+    font-size: 12px;
+    color: #FF3E30;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.signup-body .error-label i{
+    font-size: 12px;
+    color: #FF3E30;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.signup-body .input-error::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+}
+
+
+
+.signup-body .input-error{
+    color: red !important;
+    opacity: 1!important; 
+}
+
+.signup-body .radio label{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px;
+}
+.signup-body .radio input{
+    margin: 5px;
+}
+.signup-body .signup-button{
+    background-color: #37A241;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-decoration:none;
+    font-weight: normal;
+    font-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+.signup-body .signup-button:hover{
+    opacity: 0.9;
+}
+.signup-body .signup-link{
+    color: #424949;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    margin: 20px 0px 0px 0px;
+}
+.signup-body .fb{
+    color: #4285f4;
+    font-size: 42px;
+    margin: 5px;
+}
+.signup-body .gmail{
+    color: #ea4335;
+    font-size: 42px;
+    margin: 5px;
+}
+.signup-body .fb:hover{
+    opacity: 0.9;
+}
+.signup-body .gmail:hover{
+    opacity: 0.9;
+}

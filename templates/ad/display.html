@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row w-100 m-0 crumbs">
+  <h1 class="my-auto">Ad / {{venues.category}} / {{details.title}}</h1>
+</div>
+<div class="jumbotron bg-white ad-container">
+
+  <div class="row d-flex justify-content-center align-items-center ">
+    <div class="col-md-5 right-container">
+      <h1>
+        {{details.title}}
+      </h1>
+      <h5>
+        {{details.loction_id}}
+
+      </h5>
+      <div class="image-container">
+        {% for image in images|slice:":1"  %}
+        <img class="img-main" src="{{image.image.url}}" />
+        {% endfor %}
+      </div>
+      <div class="secondary-image-container">
+        {% for image in images|slice:"1:"  %}
+        <img src="{{image.image.url}}" />
+        {% endfor %}
+      </div>
+      <div class="container-full-bg">
+        <h1 class="description-title">Description</h1>
+        <label class="description"> {{ details.description }} </label>
+
+      </div>
+      <div class="container m-0 p-0">
+        <h3 class="serv-text">Services</h3>
+        <div class="services-row row bg-light text-center">
+
+          <div class="col-3 text-box">
+            <label class="text">Decoration</label><br>
+            {% if venues.decoration == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+
+          <div class="col-3 text-box">
+            <label class="text">WiFi</label><br>
+            {% if venues.wifi == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+          <div class="col-3 text-box">
+            <label class="text">Valet Parking</label><br>
+            {% if venues.valet_parking == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+          <div class="col-3 text-box">
+            <label class="text">Outside Catering</label><br>
+            {% if venues.outside_catering == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+        </div>
+        <div class="services-row row bg-light text-center">
+          <div class="col-3 text-box"><label class="text">Heater</label><br>
+            {% if venues.heater == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+          <div class="col-3 text-box"><label class="text">Air Conditioner</label><br>
+            {% if venues.air_conditioner == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+          <div class="col-3 text-box"><label class="text">DJ System</label><br>
+            {% if venues.dj_system == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+          <div class="col-3 text-box"><label class="text">Bridal Room</label><br>
+            {% if venues.bridal_room == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+        </div>
+        <div class="services-row row bg-light text-center">
+          <div class="col-3 text-box"><label class="text">Generator</label><br>
+            {% if venues.generator == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+          <div class="col-3 text-box"><label class="text">Outside Dj</label><br>
+            {% if venues.outside_dj == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+          <div class="col-3 text-box"><label class="text">Outside Decoration</label><br>
+            {% if venues.outside_decoration == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+          <div class="col-3 text-box"><label class="text">Photography</label><br>
+            {% if venues.photography == True %}
+            <div class="check-box">
+              <span>YES</span>
+            </div>
+            {% else %}
+            <div class="cross-box">
+              <span>NO</span>
+            </div>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-3 text-center text-dark">
+      <div class="left-container-top">
+        <label class="price">
+          <span>PKR</span> {{venuePrices.per_guest}} -
+          {{venuePrices.per_guest | add:dishMenus.price}}
+          <br>
+        </label>
+        <label class="manage">Managed by FestiveCircle</label>
+
+        <div class="container-mid w-100">
+          <div class="row justify-content-center">
+            <label class="manage">Managed by FestiveCircle with confidence</label>
+          </div>
+
+        </div>
+        <div class="text-white phone">
+          <label><span><i class="fas fa-phone mr-2"></i></span>
+            {{ phoneNo }}
+          </label>
+        </div>
+        <div class="message">
+          <label><span><i class="fas fa-sms mr-2"></i></span>
+            Send Message
+          </label>
+        </div>
+      </div>
+      <div class="left-container-bottom">
+        <div class="row justify-content-center text-primary">
+          <label class="tips">  
+          <span>Safety tips for transactions</span><br>
+            Use a safe location to meet seller!<br>
+            Avoid cash transaction!<br>
+            Beware of unrealistic offers!<br>
+            <span class="read-more">Read More >></span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div class="jumbotron bg-white featured-ads-container">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <h3>
+        Featured Ads
+      </h3>
+      <a class="featured-ads-label pull-right float-right" href="#">
+        View all featured ads >>
+      </a>
+    </div>
+
+    <div class="row justify-content-center">
+
+      {% for detail in featured_details %}
+      <div class="column">
+        <a href="{% url 'display' detail.id %}" class="text-dark">
+          <div class="card card-featured">
+            <div>
+              <label class="badge badge-feature rounded-0">
+                <i class="fas fa-fire"></i> Featured
+              </label>
+            </div>
+            {% for key, value in featured_details_images.items %}
+            {% if detail.id == key %}
+            <div class="image-container">
+              <img {% if value.image %} src="{{ value.image.url }}" {% else %} src="/media/extra/2.jpg" {% endif %}
+                class="card-img-top">
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            <div class="card-body text-center">
+              <label class="ad-title">
+                {{detail.title}}<br>
+              </label><br>
+              <label class="ad-price">
+                {% for key, value in featured_details_paarize.items %}
+                {% if detail.id == key %}
+
+                <span>Rs </span>{{value}} per head
+
+                {% endif %}
+                {% endfor %}
+              </label><br>
+              <label class="ad-location">
+                {{ detail.loction_id.city}}
+
+              </label>
+
+            </div>
+          </div>
+        </a>
+      </div>
+      {% if forloop.counter|divisibleby:4 %}
+    </div>
+    <br>
+    <div class="row justify-content-center">
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="promo">
+  <img src="/media/extra/ad.png">
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+                        <div class="col-md-12">
+                            <div class="pull-right"><label class="label label-danger">{{rec.status}}</label> </div>
+                            <span style="margin-right:3.5em;"><strong>Views</strong></span> {{rec.views}}
+                            <span style="margin-left: 4em; margin-right: 6em;"><strong>Rating</strong></span>
+                            {{rec.rating}}<br>
+                            <span style="margin-right:2em;"><strong>Featured</strong></span> {{rec.featured}}
+                            <span style="margin-left: 3em; margin-right: 3em;"><strong>Expire Date</strong></span>
+                            {{rec.expiryDate}}<br><br>
+                            <a data-placement="top" id="link" class="btn btn-success btn-xs glyphicon glyphicon-open"
+                                href="{% url 'display' rec.id %}" title="View"></a>
+                            <a data-placement="top" class="btn btn-info  btn-xs glyphicon glyphicon-edit"
+                                href="{% url 'edit' rec.id %}" title="edit"></a>
+                            <a data-placement="top" class="btn btn-danger  btn-xs glyphicon glyphicon-trash"
+                                href="{% url 'delete' rec.id %}" title="Delete"></a>
+                            <a data-placement="top" class="btn btn-danger  btn-xs glyphicon glyphicon-share"
+                                onclick="copyToClipboard('127.0.0.1:8000/venue/{{rec.id}}/')" title="Share"></a>
+                            <a data-placement="top" class="btn btn-danger  btn-xs glyphicon glyphicon-stop"
+                                href="{% url 'deactivate' rec.id %}" title="Deactivate"></a>
+
+                            </a>
+                        </div>
+                        <div class="col-md-12">
+                            Ad made on: {{rec.postDate}}
+                        </div>

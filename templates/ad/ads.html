@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'ad/css/ads.css' %}">
+
+<div class="d-flex justify-content-center align-self-center mt-2 bg-white">
+    
+    <div class="panel-order">
+        {% if messages %}
+          {% for message in messages%}
+            {% if message.tags == 'error' %}
+            <div class="alert alert-danger fade in alert-dismissible show">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                   <span aria-hidden="true" style="font-size:20px">×</span>
+                 </button>    <strong>{{message}}.</strong> Please try again later!
+               </div>
+            {% endif %}
+            {% if message.tags == 'success' %}
+            <div class="alert alert-primary fade in alert-dismissible show">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                   <span aria-hidden="true" style="font-size:20px">×</span>
+                 </button>    <strong>{{message}}.</strong> 
+               </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        <div class="top justify-content-center">
+            <label>Your published ads </label>
+        <a href="{% url 'postanadd' %}"class="float-right post-ad"><i class="fas fa-plus mr-2"></i> Publish another ad</a>
+        </div>
+        <div class="panel-body">
+            {% for key,rec in record.items  %}
+            <div class="row">
+                {% for k, val in ads_details_images.items %}
+                {% if k == rec.id %}
+                <div class="col-lg-1 col-sm-12 img p-0 text-center align-self-center"><img src="{{val.image.url}}" class="img"></div>
+                <div class="col-lg-4 col-sm-12 p-0 title align-self-center text-left pt-2 pb-2">
+                    <a href="{% url 'display' rec.id %}">{{rec.title}}</a>
+                </div>
+                <div class="col-lg-2 col-sm-12 status-1 text-center align-self-center pt-3 pb-2">
+                    <i class="view-icon fas fa-eye"></i>
+                    <label class="view-number">{{rec.views}}</label>
+                    <i class="rating-icon fas fa-star ml-4"></i>
+                    <label class="rating-number">{{rec.rating}}</label>
+                    <i class="feature-icon fab fa-cc-visa ml-4"></i>
+                    {% if rec.featured == False %}
+                        <label class="feature-status">No</label>
+                    {% else %}
+                    <label class="feature-status">Yes</label>
+                    {% endif %}
+                    
+
+                </div>
+                <div class="col-lg-2 col-sm-12 p-0 text-center date align-self-center pt-3 pb-2">
+                    <i class="fas fa-stopwatch"></i>
+                    <label class="exp-date">{{rec.expiryDate}}</label>
+                </div>
+                <div class="col-lg-2 col-sm-12 p-0 status text-center align-self-center pt-3 pb-2">
+                    <label class="{{rec.status}}">{{rec.status}}</label>
+
+
+
+                </div>
+                <div class="col-lg-1 col-sm-12 p-0 options text-center align-self-center pt-3 pb-2">
+                    
+                        <div class="dropdown">
+                            <svg enable-background="new 0 0 512.002 512.002" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m496.65 312.11-47.061-36.8c1.459-12.844 1.459-25.812 0-38.656l47.104-36.821c8.827-7.109 11.186-19.575 5.568-29.419l-48.96-84.629c-5.639-9.906-17.649-14.232-28.309-10.197l-55.467 22.315c-10.423-7.562-21.588-14.045-33.323-19.349l-8.512-58.923c-1.535-11.312-11.24-19.72-22.656-19.627h-98.133c-11.321-0.068-20.948 8.246-22.528 19.456l-8.533 59.093c-11.699 5.355-22.846 11.843-33.28 19.371l-55.617-22.358c-10.55-4.159-22.549 0.115-28.096 10.005l-49.003 84.779c-5.769 9.86-3.394 22.463 5.568 29.547l47.061 36.8c-1.473 12.843-1.473 25.813 0 38.656l-47.104 36.8c-8.842 7.099-11.212 19.572-5.589 29.419l48.939 84.651c5.632 9.913 17.649 14.242 28.309 10.197l55.467-22.315c10.432 7.566 21.604 14.056 33.344 19.371l8.533 58.88c1.502 11.282 11.147 19.694 22.528 19.648h98.133c11.342 0.091 21-8.226 22.592-19.456l8.533-59.093c11.698-5.357 22.844-11.845 33.28-19.371l55.68 22.379c10.55 4.149 22.543-0.122 28.096-10.005l49.152-85.12c5.503-9.83 3.084-22.196-5.716-29.228zm-240.68 50.56c-58.91 0-106.67-47.756-106.67-106.67s47.756-106.67 106.67-106.67 106.67 47.756 106.67 106.67c-0.071 58.882-47.786 106.6-106.67 106.67z" fill="#455A64"/>                    
+                                </svg>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{% url 'edit' rec.id %}"><i class="fas fa-pen-square mr-3"></i>Edit</a>
+                                <a class="dropdown-item" href="{% url 'delete' rec.id %}"><i class="fas fa-trash mr-3"></i>Delete</a>
+                                {% if rec.status == 'Active' %}
+                                <a class="dropdown-item" href="{% url 'deactivate' rec.id %}"><i class="fas fa-pause mr-3"></i>Deactivate</a>
+                                {% else %}
+                                <a class="dropdown-item" href="{% url 'activate' rec.id %}"><i class="fas fa-play mr-3"></i>Activate</a>
+                                {% endif %}
+                            </div>
+                          </div>       
+                </div>
+                {% endif %}
+                {% endfor %}
+
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

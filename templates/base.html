@@ -1,0 +1,270 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='https://fonts.googleapis.com/css?family=Share' rel='stylesheet'>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'user/css/base.css' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/bower_components/bootstrap-horizon/bootstrap-horizon.css">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/15bdcc2d06.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  {% block script %}
+  {% endblock script %}
+
+
+  {% block title %}
+  <title>Festive Circle</title>
+  {% endblock title %}
+</head>
+
+<body id="mainbody">
+  <div class="nav-gradient" id="navbar">
+
+    <nav class="navbar py-0 bottom-nav">
+      <div class="bottom-nav-row row">
+
+        <div class="col-1 pr-0 mr-0">
+          <div class="my-auto">
+            <svg class="logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="256" cy="72" r="8" />
+              <path d="m326.37 160a112.12 112.12 0 0 0-33.84-24.04 133.54 133.54 0 0 1 12.789 24.04z" />
+              <path d="m264 160h23.811c-7.273-15.449-15.531-25.824-23.811-29.97z" />
+              <path d="m354.33 160a168.94 168.94 0 0 0-15.312-9.9q4.479 4.682 8.7 9.9z" />
+              <path d="m311.24 416h28.658a179.58 179.58 0 0 0 24.514-48h-41.88a315.85 315.85 0 0 1-11.292 48z" />
+              <path d="M264,352h44.655a449.313,449.313,0,0,0,3.276-48H264Z" />
+              <path d="M264,416h30.334a286.568,286.568,0,0,0,12-48H264Z" />
+              <path d="m292.53 456.04a112.12 112.12 0 0 0 33.84-24.04h-21.051a133.54 133.54 0 0 1-12.789 24.04z" />
+              <path
+                d="M342.656,107.562,352,121.578l9.344-14.016a8.02,8.02,0,0,1,2.218-2.218L377.578,96l-14.016-9.344a8.02,8.02,0,0,1-2.218-2.218L352,70.422l-9.344,14.016a8.02,8.02,0,0,1-2.218,2.218L326.422,96l14.016,9.344A8.02,8.02,0,0,1,342.656,107.562Z" />
+              <path d="m375.86 288a226.72 226.72 0 0 0-6.719-48h-44.382a469.52 469.52 0 0 1 3.174 48z" />
+              <path d="m369.14 352a226.72 226.72 0 0 0 6.719-48h-47.927a469.52 469.52 0 0 1-3.174 48z" />
+              <path d="m264 176v48h42.329a286.54 286.54 0 0 0-12-48z" />
+              <path d="m391.87 288h31.933a166.29 166.29 0 0 0-9.473-48h-28.7a244.1 244.1 0 0 1 6.24 48z" />
+              <path d="m407.68 224a169.48 169.48 0 0 0-34.411-48h-14.07a201.71 201.71 0 0 1 22.055 48z" />
+              <path d="m311.24 176a315.85 315.85 0 0 1 11.289 48h41.88a179.58 179.58 0 0 0-24.511-48z" />
+              <path d="m338.72 442.21q6.188-3.5 12.076-7.515l-4.136-1.379c-2.572 3.117-5.225 6.072-7.94 8.894z" />
+              <path d="m396.9 368h-15.643a204.85 204.85 0 0 1-17.881 41.108l22.3-7.433z" />
+              <path d="m385.63 352h28.8a166.73 166.73 0 0 0 9.382-48h-31.943a244.1 244.1 0 0 1-6.239 48z" />
+              <path
+                d="M416.411,410.53,408,385.3l-8.411,25.232a8,8,0,0,1-5.059,5.059L369.3,424l25.232,8.411a8,8,0,0,1,5.059,5.059L408,462.7l8.411-25.232a8,8,0,0,1,5.059-5.059L446.7,424l-25.232-8.411A8,8,0,0,1,416.411,410.53Z" />
+              <path d="M264,288h47.931a449.313,449.313,0,0,0-3.276-48H264Z" />
+              <path d="m157.07 432a166.48 166.48 0 0 0 16.647 10.664q-4.868-5.017-9.435-10.664z" />
+              <path d="M264,461.971c8.28-4.147,16.538-14.522,23.811-29.971H264Z" />
+              <path d="m104.16 368a167.98 167.98 0 0 0 34.04 48h14.6a201.67 201.67 0 0 1-22.056-48z" />
+              <path d="m120.13 304h-31.946a166.73 166.73 0 0 0 9.382 48h28.8a244.1 244.1 0 0 1-6.236-48z" />
+              <path
+                d="M152.8,176H138.467a167.9,167.9,0,0,0-27.209,34.685l20.472,10.236A200.522,200.522,0,0,1,152.8,176Z" />
+              <path
+                d="m95.155 283.58a7.992 7.992 0 0 1-6.958 4.408v0.014h31.936a245.69 245.69 0 0 1 4.816-41.53l-14.986 7.493z" />
+              <path
+                d="M100.422,240.845,118.111,232l-17.689-8.845a8,8,0,0,1-3.577-3.577L88,201.889l-8.845,17.689a8,8,0,0,1-3.577,3.577L57.889,232l17.689,8.845a8,8,0,0,1,3.577,3.577L88,262.111l8.845-17.689A8,8,0,0,1,100.422,240.845Z" />
+              <path d="m200.07 288h47.931v-48h-44.655a449.31 449.31 0 0 0-3.276 48z" />
+              <path d="m205.67 224h42.329v-48h-30.334a286.54 286.54 0 0 0-11.995 48z" />
+              <path d="m173.2 149.88a168.88 168.88 0 0 0-15.742 10.123h6.826q4.316-5.343 8.916-10.123z" />
+              <path d="m224.19 160h23.811v-29.97c-8.28 4.146-16.538 14.521-23.811 29.97z" />
+              <path d="m217.67 416h30.334v-48h-42.329a286.57 286.57 0 0 0 11.995 48z" />
+              <path d="m203.34 352h44.655v-48h-47.931a449.31 449.31 0 0 0 3.276 48z" />
+              <path d="M248,461.971V432H224.189C231.462,447.449,239.72,457.824,248,461.971Z" />
+              <path d="m172.1 176a179.58 179.58 0 0 0-24.514 48h41.88a315.85 315.85 0 0 1 11.289-48z" />
+              <path d="m142.86 352h44.382a469.52 469.52 0 0 1-3.174-48h-47.927a226.72 226.72 0 0 0 6.719 48z" />
+              <path d="m200.76 416a315.85 315.85 0 0 1-11.289-48h-41.88a179.58 179.58 0 0 0 24.511 48z" />
+              <path d="m187.24 240h-44.382a226.72 226.72 0 0 0-6.719 48h47.927a469.52 469.52 0 0 1 3.174-48z" />
+              <path d="m219.47 135.96a112.12 112.12 0 0 0-33.84 24.04h21.051a133.54 133.54 0 0 1 12.789-24.04z" />
+              <path d="m185.63 432a112.12 112.12 0 0 0 33.84 24.04 133.54 133.54 0 0 1-12.789-24.04z" />
+              <path
+                d="M479.155,84.422a8,8,0,0,0-10.733-3.577l-16,8A8,8,0,0,0,448,96v33.376A24,24,0,1,0,464,152V100.944l11.578-5.789A8,8,0,0,0,479.155,84.422ZM440,160a8,8,0,1,1,8-8A8.009,8.009,0,0,1,440,160Z" />
+              <path
+                d="m88 416a8 8 0 0 0-8 8v25.376a24 24 0 1 0 16 22.624v-48a8 8 0 0 0-8-8zm-16 64a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z" />
+              <path
+                d="M264,94.62v17.56c-2.06-.1-4.13-.15-6.21-.17-.92-.02-1.85-.02-2.78,0-.37-.01-.73,0-1.08.01h-.07q-2.94.03-5.86.17V94.62a23.878,23.878,0,0,0,16,0Z" />
+              <path d="M264,24V49.38a23.878,23.878,0,0,0-16,0V24a8,8,0,0,1,16,0Z" />
+            </svg>
+
+
+          </div>
+
+
+
+        </div>
+        <div class="col-2 pl-0 py-auto my-auto text-left">
+          <label class="festive-logo">FestiveCircle</label>
+        </div>
+        <aside class="col-5"></aside>
+        <div class="col-2 text-right my-auto">
+          {% if user.is_authenticated %}
+          <div class="dropdown show">
+
+            <img class="profile-img top-dropdown-link" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" src="{% static 'user/images/avatar.png' %}" alt="">
+
+            <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuLink">
+              <div class="row pr-4 pl-4 pt-3 pb-3 m-0 mb-3">
+                <img class="profile-img2" {% if URL %} src="{{ URL }}" {% else %}
+                  src="{% static 'user/images/avatar.png' %}" {% endif %}>
+                <div class="profile-info">
+                  <label class="text-left one">Hello,</label><br>
+                  <label class="user-name">{{user.get_full_name}}</label><br>
+                  <a class="two" href="{% url 'profile' %}">View and edit your profile</a>
+                </div>
+              </div>
+              <div class="text-center">
+
+
+              </div>
+              <a class="dropdown-item" href="{% url 'ads' %}">
+                <svg class="mr-2" width="23px" height="23px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                  fill-rule="evenodd">
+                  <path class="rui-77aaa"
+                    d="M384 392.533h341.333v42.667h-341.333v-42.667zM384 520.533h341.333v42.667h-341.333v-42.667zM384 648.533h213.333v42.667h-213.333v-42.667zM384 264.533h341.333v42.667h-341.333v-42.667zM170.667 221.867h-42.667v682.667l42.667 42.667h597.333v-42.667h-597.333zM810.667 776.533v-597.333h-512v597.333zM853.333 93.867l42.667 42.667v682.667l-42.667 42.667h-597.333l-42.667-42.667v-682.667l42.667-42.667z">
+                  </path>
+                </svg>
+                My Ads</a>
+              <a class="dropdown-item" href="#">
+                <svg class="mr-2" width="24px" height="24px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                  fill-rule="evenodd">
+                  <path class="rui-77aaa"
+                    d="M713.387 128c-104.533 0-164.267 37.12-204.373 118.187-38.115-70.843-111.733-118.187-196.408-118.187-0.1 0-0.201 0-0.301 0l0.016-0c-215.893 0-288.853 289.707-170.667 407.467 48.64 48.213 189.867 197.973 370.347 389.547 196.693-207.787 341.333-357.547 372.053-389.547 116.907-116.053 40.107-407.467-170.667-407.467zM837.12 487.253c-31.147 31.573-136.96 142.080-317.867 333.227l-6.4 6.827-5.973-6.827q-248.32-263.68-318.293-333.227c-85.333-85.333-15.36-291.84 123.733-291.84 81.067 0 148.48 53.333 185.173 151.893l11.947 27.307 11.947-27.307c32.427-107.947 90.027-151.893 192-151.893 135.253-0 209.067 207.36 123.733 291.84z">
+                  </path>
+                </svg>
+
+                My Saved Ads</a>
+
+              {% if user.is_authenticated and not backends.associated %}
+              <a class="dropdown-item" href="{% url 'verify' %}">
+                <svg class="mr-2" width="23px" height="23px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                  fill-rule="evenodd">
+                  <path class="rui-77aaa"
+                    d="M219.934 190.174l-49.28 89.856h326.485v-89.856zM575.902 115.217v239.403h79.829v-74.581h176.512l59.52-89.856h-236.032v-74.965zM219.934 705.771l-49.28 89.813h228.693v-89.813zM473.143 630.775v239.403h79.829v-74.581h279.253l59.52-89.813h-338.773v-75.008zM472.26 449.297v89.856h370.261l49.237-89.856zM317.585 374.763v74.539h-87.381l-59.52 89.856h146.901v75.008h79.829v-239.403z">
+                  </path>
+                </svg>
+                Change Password</a>
+              {% endif %}
+              <a class="dropdown-item" href="{% url 'logout' %}">
+                <svg class="mr-2" width="23px" height="23px" viewBox="0 0 1024 1024" data-aut-id="icon" class=""
+                  fill-rule="evenodd">
+                  <path class="rui-77aaa"
+                    d="M896 422.4v-247.467l-46.933-42.667h-678.4l-46.933 38.4v682.667l46.933 42.667h682.667l42.667-38.4v-260.267h-85.333v213.333h-601.6v-593.067h601.6v204.8h85.333zM776.533 490.667h-345.6l157.867-157.867-29.867-29.867-209.067 209.067 209.067 213.333 29.867-29.867-157.867-162.133h345.6v-42.667z">
+                  </path>
+                </svg>
+
+                Sign Out</a>
+            </div>
+          </div>
+          {% else %}
+          <div>
+            <a class="login-link" href="{% url 'login' %}">SIGN IN</a>
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="text-left my-auto col-2">
+          <a class="post-link" href="{% url 'postanadd' %}"><span><i class="fas fa-plus mr-1"></i> POST</span></a>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+  <div class="content" id='content'>
+    {% block content %}
+    {% endblock content %}
+  </div>
+  <footer class="container-fluid text-center text-white">
+    <div class="row justify-content-center align-items-center" id="bottom">
+      <div class="col-md-5">
+        <p>SUBSCRIBE TO OUR NEWSLETTER!</p>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center" id="bottom">
+      <div class="col-md-5">
+        <form class="example" action="">
+          <div class="row justify-content-center">
+            <input type="text" placeholder="example@mail.com" name="search">
+            <button type="submit">SUBSCRIBE</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center pb-0 mb-0" id="bottom">
+      <div class="col-md-4">
+        <p class="pb-0 mb-0">FOLLOW US!</p>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center" id="bottom">
+      <div class="col-md-4">
+        <a href="#"><i class="fa-lg	fab fa-facebook p-2" id="socialico"></i></a>
+        <a href="#"><i class="fa-lg	fab fa-twitter p-2" id="socialico"></i></a>
+        <a href="#"><i class="fa-lg	fab fa-youtube p-2" id="socialico"></i></a>
+        <a href="#"><i class="fa-lg	fab fa-instagram p-2" id="socialico"></i></a>
+      </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center pt-2" id="bottom">
+      <div class="col-md-4">
+        <p class="text pb-0 mb-0" id="p2">DOWNLOAD MOBILE APPS!</p>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center" id="bottom">
+      <div class="col-md-4">
+        <a href="#"><img id="playstore-img" src="{% static 'user/gplay.png' %}"></a>
+        <a href="#"><img id="appstore-img" src="{% static 'user/istore.png' %}"></a>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center" id="bottom">
+      <div class="col-md-9">
+        <hr class="mt-4 pb-0 mb-0"
+          style="height:1px; border:none; color:#707B7C; background-color:#707B7C; border-radius: 2px;" />
+        <label class="pt-2 mt-0" id="footertext">Copyright © 2003 - 2019 Ingenious Concepts. All right reserved
+          <br><a id="footerlink" href="#">Terms of service and privacy policy</a>
+        </label>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $(this).scrollTop(0);
+    });
+    window.onscroll = function () { myFunction() };
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+  </script>
+  {% block footscripts %}
+  {% endblock footscripts %}
+</body>
+
+</html>

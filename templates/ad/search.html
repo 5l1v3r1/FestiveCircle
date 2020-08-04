@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="jumbotron bg-white featured-ads-container">
+   <div class="row justify-content-center">
+     <div class="col-10">
+       <h3>
+         Searched Ads
+       </h3>
+     </div>
+ 
+     <div class="row justify-content-center">
+ 
+       {% for key, value in det.items  %}
+       <div class="column">
+         <a href="" class="text-dark">
+           <div class="card card-featured">
+            
+             {% for k, val in search_details_images.items %}
+             {% if value.id == k %}
+             <div class="image-container">
+               <img {% if val.image %} src="{{ val.image.url }}" {% else %}
+                 src="/media/extra/2.jpg" {% endif %} class="card-img-top" >
+             </div>
+             {% endif %}
+             {% endfor %}
+ 
+             <div class="card-body text-center">
+               <label class="ad-title">
+                 {{value.title}}<br>
+               </label><br>
+               <label class="ad-price">
+                 {% for k, val in search_details_price.items %}
+                 {% if value.id == k %}
+ 
+                 <span>Rs </span>{{val}} per head
+ 
+                 {% endif %}
+                 {% endfor %}
+               </label><br>
+               <label class="ad-location">
+                   {{ value.loction_id.city}}
+                 
+               </label>
+ 
+             </div>
+           </div>
+         </a>
+       </div>
+       {% if forloop.counter|divisibleby:4 %}
+     </div>
+     <br>
+     <div class="row justify-content-center">
+       {% endif %}
+       {% endfor %}
+     </div>
+   </div>
+ </div>
+ </div>
+ 
+
+{% endblock %}

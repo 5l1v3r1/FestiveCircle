@@ -1,0 +1,168 @@
+.login-body{
+    border: 1px solid #1D59AA;
+    background-color: #FDFEFE;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.41);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px 60px 50px 60px;
+}
+.login-body h3{
+    color: #3949AB;
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.login-body .btn-fb{
+    background-color: #3B5998;
+    border: none;
+    color: white;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    right: 10%;
+    left: 10%;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+.login-body .btn-fb span{
+    width: 50px;
+}
+
+.login-body .btn-fb:hover {
+    opacity: 0.9;
+}
+
+.login-body .btn-google{
+    background-color: #FF3E30;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-decoration:none;
+    font-weight: normal;    
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+.login-body .btn-google span{
+    
+    width: 50px;
+}
+
+.login-body .btn-google:hover {
+    opacity: 0.9;
+}
+
+.login-body .signin-text{
+    color: #272324;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.login-body .input{
+    outline: 1px solid transparent;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 45px;
+    font-weight: 500;
+    font-size: 15px;   
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
+
+.login-body .input:focus{
+    outline: 1px solid transparent;
+    border: 1px solid #ABB2B9;
+}
+
+.login-body .input-error{
+    border: 2px solid #FF3E30;
+    color: #FF3E30;
+    border-radius: 3px;
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 45px;
+    font-weight: 500;
+    font-size: 15px;   
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
+.login-body .input-error:hover{
+    border: 2px solid #FF3E30;
+}
+.login-body .error-label {
+    font-size: 12px;
+    color: #FF3E30;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.login-body .error-label i{
+    font-size: 12px;
+    color: #FF3E30;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.login-body .input-error::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+}
+
+
+.login-body .input-error{
+    color: red !important;
+    opacity: 1!important; 
+}
+
+.login-body .staysinged-in{
+    color: #424949;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.login-body .signin-button{
+    background-color: #37A241;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-decoration:none;
+    font-weight: normal;
+    font-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.login-body .signin-button:hover{
+    opacity: 0.9;
+}
+.login-body .links-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.login-body .login-link{
+    color: #424949;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+}

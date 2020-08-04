@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block script %}
+<link rel="stylesheet" type="text/css" href="{% static 'ad/css/advanced-search.css' %}">
+
+{% endblock script %}
+{% block content %}
+<div class="row heading-container pr-5 pl-5 m-0 justify-content-center">
+    <div class="col-lg-10 pt-5 pb-5 mb-4 mt-4">
+        <h1>Find Venues for Booking in Pakistan</h1>
+        <label>Fill in your search criteria to find suitable venues</label>
+    </div>
+</div>
+<div class="row search-container pr-5 pl-5 m-0 justify-content-center">
+    <div class="col-lg-10">
+        <form class="form-inline justify-content-center search-form" action="/action_page.php">
+            <div class="form-group col-lg-4">
+                <div class="dropdown">
+                    <a class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Categories
+                    <span><i class="fas fa-caret-down"></i></span>
+                    </a>
+                   
+                      
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a data-value="another action">Another action</a></li>
+                      <li><a data-value="something else here">Something else here</a></li>
+                      <li><a data-value="separated link">Separated link</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="form-group col-lg-4">
+                <div class="dropdown">
+                    <a class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Cities
+                    <span><i class="fas fa-caret-down"></i></span>
+                    </a>
+                   
+                      
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a data-value="another action">Another action</a></li>
+                      <li><a data-value="something else here">Something else here</a></li>
+                      <li><a data-value="separated link">Separated link</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="form-group col-lg-4">
+                <div class="dropdown">
+                    <a class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Price
+                    <span><i class="fas fa-caret-down"></i></span>
+                    </a>
+                   
+                      
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a data-value="another action">Another action</a></li>
+                      <li><a data-value="something else here">Something else here</a></li>
+                      <li><a data-value="separated link">Separated link</a></li>
+                    </ul>
+                  </div>
+            </div>
+            
+            <div class="form-group col-lg-12 mt-4">
+                <a class="mr-auto search-label">View all ads >></a>
+                <button type="submit" class="search-button ml-auto">Search</button>
+            </div>
+          </form>
+    </div>
+</div>
+
+
+
+{% endblock %}
+{% block footscripts %}
+<script src="{% static 'ad/js/main.js' %}"></script>
+
+{% endblock footscripts %}

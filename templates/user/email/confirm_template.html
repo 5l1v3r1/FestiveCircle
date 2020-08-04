@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="p-5 m-5 text-center" style="height: 50vh;">
+    <h1 class="m-5">
+        {% if success %}
+        <h1 class="text-dark"><i class="fas fa-check-circle mr-2"></i></i>Success...Your account has been verified</h1>
+            <h3 class="text-dark">Login to account to continue.</h3>
+        {% else %}
+            <h1 class="text-danger"><i class="fas fa-exclamation-triangle mr-2"></i>Ooops...Something went wrong.</h1>
+            <h3 class="text-danger">Your token is invalid!</h3>
+        {% endif %}
+    </h1>
+</div>
+{% endblock content %}
