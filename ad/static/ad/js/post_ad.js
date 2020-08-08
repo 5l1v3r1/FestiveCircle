@@ -13,7 +13,7 @@ function validateTitle(e) {
     input = title.value.replace(/^\s+/,"");
     title.value = input; 
     var pattern = new RegExp(/[~`._@()!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/); 
-    if (input.length > 20 ) {
+    if (input.length > 50 ) {
         title.classList.add("border-red");
         title_status.classList.add('animate__animated', 'animate__bounceIn', 'validation-error');
         title_status.innerHTML = '<i class="fas fa-exclamation-triangle pr-1"></i>You can only use upto 20 characters';
@@ -196,7 +196,7 @@ function validateAddressComplete(e) {
         address_status.innerHTML = '<i class="fas fa-exclamation-triangle pr-1"></i>You can\'t leave a mandatory field empty';
         return false;
     }
-    if (input.length < 50 ){
+    if (input.length < 10 ){
         address.classList.add('border-red');
         address_status.classList.add('animate__animated', 'animate__bounceIn', 'validation-error');
         address_status.innerHTML = '<i class="fas fa-exclamation-triangle pr-1"></i>You must at least enter 50 characters';

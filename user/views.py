@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model, update_session_auth_hash
 from django.contrib import messages
-import ipdb
 from .models import Profile, ResetCodes as reset_codes
 from django.conf import settings
 import random
@@ -160,7 +159,6 @@ def home(request):
 
 @login_required
 def verify_password(request):
-    print("THIS IS METHOD 1")
     if request.method == 'POST':
       password = request.POST.get('password')
       if password == "":
@@ -174,7 +172,6 @@ def verify_password(request):
       check = check_password(password, user.password)
       if check:
         request.session['reset_password'] = 'True'
-        print("GOT HERE 1"+request.session['reset_password'])
         return redirect('update')
       else:
         messages.error(request, "Password didn't match", extra_tags="password")
@@ -182,7 +179,6 @@ def verify_password(request):
       
     else:
       return render(request, 'user/verify_password.html')  
-import ipdb
 @login_required
 def update_password(request):
   if 'reset_password' in request.session:
@@ -203,7 +199,7 @@ def update_password(request):
       user.set_password(password)
       user.save()
       update_session_auth_hash(request, user)
-      del request.session['reset_passwgord']
+      del request.session['reset_password']
       return redirect('home')
     else:
       return render(request, 'user/update_password.html')  

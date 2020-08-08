@@ -1,12 +1,15 @@
-
-.top-nav{
-	margin-bottom: 0px !important;
+.heading-container {
+    background-color: #223C7A;
+    color: #fff;
 }
-.bottom-nav{
-	margin-bottom: 0px !important;
+.svg-logo{
+	width: 80px; height: 80px;
+	fill: white;
 }
-.logo{
-	padding: 0px !important;
+.crumb-text{
+	font-size: 30px;
+	width: 500px;
+	padding-top: 20px;
 }
 .panel-order{
 	width: 85%;
@@ -17,18 +20,16 @@
 	color: #3949AB;
     font-size: 35px;
 	font-weight: 600;
-	margin-bottom: 0px;
+	margin-bottom: 20px;
 	width: 50%;
 }
 .panel-order .row {
 	background-color:#FBFCFC;
-	margin-top: 20px;
-	margin-bottom: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 	border-radius: 4px;
 	border: 1px solid #D0D3D4;
-	-webkit-box-shadow: 0px 0px 20px -2px rgba(0,0,0,1);
-	-moz-box-shadow: 0px 0px 20px -2px rgba(0,0,0,1);
-	box-shadow: 0px 0px 20px -2px rgba(0,0,0,1);
+
 }
 .panel-order .error-label {
     font-size: 12px;

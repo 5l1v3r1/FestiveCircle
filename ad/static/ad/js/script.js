@@ -116,7 +116,7 @@ function menuDescriptionBlur(element) {
     $("#"+element.id).addClass("border-red");
     return true;
 }
-if( input.length > 99 ){   
+if( input.length > 50 ){   
     element.dataset['pass'] = '1';
     $("#"+element.id+"_status").addClass("animate__anmated animate__bounceIn validation-success");
     $("#"+element.id+"_status").html('<i class="fas fa-exclamation-triangle pl-1 pr-1"></i>Your description has been validated');

@@ -11,17 +11,155 @@
     border-bottom: 3px solid #0774B8;
 }
 
+.featured-ads-container{
+    margin: 0px !important;
+    padding: 15px !important;
+    background-color: #ffff;
+}
+.featured-ads-container .ico{
+    width: 50px;
+    height: 50px;
+
+}
+.location-ads-container h3, .featured-ads-container h3{
+    font-size: 35px;
+    font-weight: 600;
+    border-bottom: 4px solid #FBBC05;
+    display: inline-block;
+}
+
+.location-ads-container .location-ads-label, .featured-ads-container .featured-ads-label{
+    font-size: 20px;
+    font-weight: 500;
+    color: #4285F4;
+}
+
+.location-ads-container .card-location, .featured-ads-container .card-featured{
+margin: 20px 20px 20px 20px;
+padding-bottom: 0px;
+
+background-color: #F8F9FA !important;
+width: 245px;
+border: 1px solid #B2BABB;
+border-radius: 2px;
+border-bottom: 5px solid #4285f4;
+-webkit-box-shadow: 0px 3px 6px 0px rgba(166,172,175,1);
+-moz-box-shadow: 0px 3px 6px 0px rgba(166,172,175,1);
+box-shadow: 0px 3px 6px 0px rgba(166,172,175,1);
+}
+
+.location-ads-container .card-location .badge-location, .featured-ads-container .card-featured .badge-feature{
+    position: absolute;
+    background:red;
+    text-align: center;
+    color:white;
+    padding:2px 7px 2px 7px;
+    font-size:15px;
+    font-weight:  500;
+    letter-spacing: 1px;
+    
+}
+.location-ads-container .card-location .badge-location .fas, .featured-ads-container .card-featured .badge-feature span{
+    color: #fff;
+    font-size: 13px;
+    padding: 5px;
+    background: #16AAE8;
+}
+.location-ads-container .card-location .image-container, .featured-ads-container .card-featured .image-container{
+    height: 180px;
+    
+}
+.location-ads-container .card-location .image-container img, .featured-ads-container .card-featured .image-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    transition: transform .2s;
+}
+
+.location-ads-container .card-location .card-body, .featured-ads-container .card-featured .card-body{
+    padding: 10px 0px 0px 0px;
+}
+
+.location-ads-container .card-location .card-body .ad-title, .featured-ads-container .card-featured .card-body .ad-title{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px 5px 0px 5px;
+    text-transform: capitalize;
+    color: #272727;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+.location-ads-container .card-location .card-body .ad-title:hover, .featured-ads-container .card-featured .card-body .ad-title:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.location-ads-container .card-location .card-body .ad-price, .featured-ads-container .card-featured .card-body .ad-price{
+    font-size: 25px;
+    font-weight: 400;
+    color: #4285f4;
+    padding: 0px;
+    margin: 5px;
+    text-align: center;
+    width: 100%;
+    line-height: 25px;
+}
+.location-ads-container .card-location .card-body .ad-price span, .featured-ads-container .card-featured .card-body .ad-price span{
+    color: #4285f4;
+    font-size: 15px;
+    font-weight: 600;
+}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+.location-ads-container .card-location .card-body .ad-location, .featured-ads-container .card-featured .card-body .ad-location{
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px;
+    padding: 0px;
+    width: 100%;
+    color: #5F6A6A;
+    background: #D6EAF8;
+}
+.location-ads-container .card-location .card-body .ad-description, .featured-ads-container .card-featured .card-body .ad-description{
+    font-size: 18px;
+    font-weight: 500;
+    color: #272727;
+    text-align: center;
+    text-transform: uppercase;
+}
+.featured-ads-container .card-body .read-more{
+    margin: 10px 10px 10px 10px !important;
+    padding: 5px 10px 5px 10px;
+    color: #fff;
+    background: #4285f4;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 2px;
+}
+.featured-ads-container .card-body .read-more:hover{
+    opacity: 0.9;
+}
 .ad-container{
     margin: 0px;
 }
 .ad-container .right-container{
     border: 1px solid #9E9E9E;
-    padding: 20px;
+    padding: 10px;
 }
 .ad-container .right-container h1{
-   color: #0774B8;
-   margin: 0px;
+   color: #2A65EA;
+   margin: 5px;
+   font-size: 30px;
+
 }
+.ad-container .right-container h5{
+    color: #272727;
+    margin: 5px;
+    font-size: 17px;
+ }
 .ad-container .right-container label{
     color: #000;
     font-weight: 600;
@@ -32,26 +170,19 @@
     margin-top: 15px;
     margin-bottom: 5px;
     width: 100%;
-    height: 350px;
+    height: 450px;
     
  }
  .ad-container .right-container  img{
     width: 100%;
     height: 100%;
  }
- .ad-container .right-container  .description-title{
-    margin-top: 10px;
-    margin-bottom: 2px;
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
- }
 
  .ad-container .right-container  .description{
     font-weight: 500;
     font-size: 15px;
-    color: #515A5A;
-    margin: 0px;
+    color: #272727;
+    padding: 10px;
  }
 
  .ad-container .right-container  .text-box{
@@ -80,23 +211,53 @@
     color: #039BE5;
     padding: 1px;
  }
+ .ad-container .right-container .services-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+ .ad-container .right-container .container-full-bg{
+    width: 100%;
+    background-color: #F6F6F6;
+    border-radius: 5px;
+    margin-top: 10px;
+ }
 
- .ad-container .right-container .cross-box  span{
-    font-size: 20px;  
-    font-weight: 600;
-    color: #F44336;
+ .ad-container .right-container .container-full-bg span{
+    font-size: 30px;
+    margin: 10px;
+ }
+ .ad-container .right-container .svg-service{
+    padding: 10px;
+    background-color: #F6F6F6;
+    border: 2px solid #EFEFEF;
+    width: 136px;
+ }
+ .ad-container .right-container .svg-service svg{
+    height: 40px;   width: 40px; 
+ }
+
+ .ad-container .right-container .svg-service span{
+    font-size: 16px;  
+    font-weight: 500;
+    color: #272727;
     padding: 1px;
+    height: 50px;
  }
 
  .ad-container .secondary-image-container{
      width: 100%;
-     height: 65px;
+     height: 75px;
      padding-bottom: 5px;
+     display: flex;
+     justify-content: left;
  }
  .ad-container .secondary-image-container img{
     width: 87px;
     height: 100%;
-
+    margin-right: 5px;
+    cursor: pointer;
 }
 .ad-container .right-container .services-container{
     display: none !important;

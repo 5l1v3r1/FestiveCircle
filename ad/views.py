@@ -250,22 +250,20 @@ def display(request, id):
     
     for detail in featured_details:
         featured_details_images[detail.id] = images.objects.filter(detail_id=detail).first()
-        featured_details_paarize[detail.id] = str(Dish_Menu.objects.get(venue_id = Venue.objects.get(detail_id = detail.id)))
+        obj = VenuePrice.objects.filter(venue_id = Venue.objects.get(detail_id = detail.id)).first()
+        featured_details_paarize[detail.id] = str(obj.per_guest)
 
     detail = Detail.objects.get(id=id)
     image = images.objects.filter(detail_id=id)
     venue = Venue.objects.get(detail_id=id)
     venuePrice = VenuePrice.objects.get(venue_id=venue)
-    dishMenu = Dish_Menu.objects.get(venue_id=venue)
-    C = contact.objects.get(detail_id=detail) 
-    phoneNo = C.phone
+    dishMenu = None
     context = {
        'details':detail,
        'images':image,
        'venues':venue,
        'venuePrices':venuePrice,
        'dishMenus':dishMenu,
-       'phoneNo':phoneNo,
        'featured_details':featured_details,
        'featured_details_images':featured_details_images,
        'featured_details_paarize':featured_details_paarize,

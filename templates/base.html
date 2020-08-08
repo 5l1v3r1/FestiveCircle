@@ -31,8 +31,9 @@
     <nav class="navbar py-0 bottom-nav">
       <div class="bottom-nav-row row">
 
-        <div class="col-1 pr-0 mr-0">
-          <div class="my-auto">
+        <div class="col-lg-1 col-md-1 col-sm-4  col-xs-4 pr-0 mr-0">
+          <div class="my-auto text-center">
+            <a href="{% url 'main' %}">
             <svg class="logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
               <circle cx="256" cy="72" r="8" />
               <path d="m326.37 160a112.12 112.12 0 0 0-33.84-24.04 133.54 133.54 0 0 1 12.789 24.04z" />
@@ -87,18 +88,18 @@
                 d="M264,94.62v17.56c-2.06-.1-4.13-.15-6.21-.17-.92-.02-1.85-.02-2.78,0-.37-.01-.73,0-1.08.01h-.07q-2.94.03-5.86.17V94.62a23.878,23.878,0,0,0,16,0Z" />
               <path d="M264,24V49.38a23.878,23.878,0,0,0-16,0V24a8,8,0,0,1,16,0Z" />
             </svg>
-
+          </a>
 
           </div>
 
 
 
         </div>
-        <div class="col-2 pl-0 py-auto my-auto text-left">
+        <div class="col-lg-2 col-md-2 col-sm-4  col-xs-4  pl-0 py-auto my-auto text-left">
           <label class="festive-logo">FestiveCircle</label>
         </div>
-        <aside class="col-5"></aside>
-        <div class="col-2 text-right my-auto">
+        <aside class="col-lg-5 col-md-5 col-sm-0"></aside>
+        <div class="col-lg-2 col-md-2 col-sm-4 text-right my-auto">
           {% if user.is_authenticated %}
           <div class="dropdown show">
 
@@ -165,7 +166,7 @@
           {% endif %}
         </div>
 
-        <div class="text-left my-auto col-2">
+        <div class="text-left my-auto col-lg-2 col-md-2 col-sm-12 pt-2 pb-2">
           <a class="post-link" href="{% url 'postanadd' %}"><span><i class="fas fa-plus mr-1"></i> POST</span></a>
         </div>
 

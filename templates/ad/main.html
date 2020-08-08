@@ -6,15 +6,39 @@
 {% endblock script %}
 {% block content %}
 
+<div class="carousel slide" data-ride="carousel">
+
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'ad/asset/1.jpg' %}" alt="Los Angeles" style="width: 100%; height: 400px;">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'ad/asset/2.jpg' %}" alt="Chicago" style="width: 100%; height: 400px;">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'ad/asset/3.jpg' %}" alt="New York" style="width: 100%; height: 400px;">
+    </div>
+  </div>
 
 
 
-<div class="search-container d-flex justify-content-center align-self-center" style="background: url('{% static 'ad\asset\bkg.jpg' %}')">
+</div>
+
+
+
+<div class="search-container d-flex justify-content-center align-self-center" style="margin-top: -450px;">
 
   <form class="my-auto search-form">
+    <div class="row description-row p-0 m-0">
+      <div class="col-12 align-self-center">
+        <h3 class="text-center">Search a venue</h3>
+      </div>
 
+    </div>
       <div class="row search-row justify-content-center p-0 m-0">
-        <div class="col-lg-2 p-0">
+        <div class="col-lg-2 col-sm-6 p-0">
         <div class="dropdown">
           <a class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" > 
           Categories
@@ -29,7 +53,7 @@
           </ul>
         </div>
       </div>
-              <div class="col-lg-4 p-0">
+              <div class="col-lg-4 col-sm-6 p-0">
           <input class="search-input" type="text" placeholder="Name" name="email">
         </div>
         <div class="col-lg-1 p-0">
@@ -52,29 +76,34 @@
         <h3 class="text-left pb-4">
           Post your Ad on festive circle<br>
         </h3><br>
-        <object data="{% static 'icons/speed.svg' %}" class="ico" type="image/svg+xml" >
+        <object data="{% static 'icons/footprints.svg' %}" class="ico" type="image/svg+xml" >
           </object>
         <label class="text-left">
           
-          Get your events booked fast<br>
+          Post your ad in easy and simple steps<br>
         </label><br>
-         <object data="{% static 'icons/shield.svg' %}" class="ico" type="image/svg+xml">
-          </object>
-        <label class="text-left">
-          Get genuine offers<br>
-        </label><br>
-        <object data="{% static 'icons/money.svg' %}" class="ico" type="image/svg+xml">
+        <object data="{% static 'icons/increase.svg' %}" class="ico" type="image/svg+xml">
         </object>
         <label class="text-left">
-                    Get you events booked at good offers
+                    Feature your ads for a reach x2 
         </label>
         <br>
-        <button class="ad-post-button">Post your ad</button>
+         <object data="{% static 'icons/team.svg' %}" class="ico" type="image/svg+xml">
+          </object>
+        <label class="text-left">
+          Reach hundreds of clients<br>
+        </label><br>
+        
       </div>
       <div class="separate-left">
         <h3 class="text-left pb-4">
           Try <span>FestiveCircle</span> for booking a venue<br>
         </h3><br>
+        <object data="{% static 'icons/money.svg' %}" class="ico" type="image/svg+xml">
+        </object>
+        <label class="text-left">
+                    Get you events booked at good offers
+        </label><br>
         <object data="{% static 'icons/speed.svg' %}" class="ico" type="image/svg+xml" >
         </object>
       <label class="text-left">
@@ -87,12 +116,7 @@
        
         Get genuine offers<br>
       </label><br>
-      <object data="{% static 'icons/money.svg' %}" class="ico" type="image/svg+xml">
-      </object>
-      <label class="text-left">
-                  Get you events booked at good offers
-      </label><br>
-      <button class="ad-featured-button" style="background: #FDA408;">Post your featured ad</button>
+      
 
       </div>
 
@@ -149,7 +173,7 @@
               </label> 
               
               <label class="ad-description">
-                {{ detail.loction_id.city}}
+                <i class="fas fa-map-marker-alt mr-2"></i>{{ detail.loction_id.city}}
               </label>
               
               
@@ -169,78 +193,22 @@
   <img src="/media/extra/ad.png" >
 </div>
 <div class="services-2 row text-center">
-<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pt-5 pb-5">
-  <i class="fas fa-ad"></i>
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pt-4 pb-3">
+  <i class="fas fa-ad" ></i>
   <h4>Free Ad</h4>
   <label>Post your for free in 30 seconds</label>
 </div>
-<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pt-5 pb-5">
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pt-4 pb-3">
   <i class="fas fa-hand-sparkles"></i>
   <h4>Genuine Customer</h4>
   <label>Get authentic customers from FestiveCircle</label>
 </div>
-<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pt-5 pb-5">
-  <i class="far fa-clock"></i>
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pt-4 pb-3">
+  <i class="fas fa-clock"></i>
   <h4>Book Faster</h4>
   <label>Book your event fater than others at a better price</label>
 </div>
 </div>
-
-<div class="jumbotron utility">
-  <div class="row justify-content-center m-0 p-0">
-    <div class="col-12 mt-5 mb-3 pr-4 pl-4">
-      <div>
-          <h3 style="margin: 0px 0px 10px 0px;">
-            Quick Links
-          </h3>
-          <a class="utility-label pull-right float-right" href="#">
-      View all featured ads >>
-    </a>
-  </div>
-    
-  </div>
-  </div>
-
-  <div class="row justify-content-left">
-
-
-    <div class="list-group list-group-flush col-lg-4 col-md-6 col-xs-12 col-sm-12 search-options">
-      <i class="fas text-dark fa-hotel fa-2x"></i>
-      <label class="utility-heading">
-        Search By Category
-      </label>
-      <a href="{% url 'search' category='Banquet Hall' city='None' min_price='0' max_price='0' %}" class="text-muted p-1">Search By Banquet Hall</a>
-      <a href="{% url 'search' category='Marquee' city='None' min_price='0' max_price='0' %}" class="text-muted p-1">Search By Marquee</a>
-      <a href="{% url 'search' category='Farmhouse' city='None' min_price='0' max_price='0' %}" class="text-muted p-1">Search By Farmhouse</a>
-      <a href="{% url 'search' category='Hotel Hall' city='None' min_price='0' max_price='0' %}" class="text-muted p-1">Search By Hotel Hall</a>
-
-    </div>
-
-    <div class="list-group list-group-flush col-lg-4 col-md-6 col-xs-12 col-sm-12 search-options">
-      <i class="fas text-dark fa-map-marked fa-2x"></i>
-      <label class="utility-heading">
-        Search By City
-      </label>
-      <a href="{% url 'search' category='None' city='Lahore' min_price='0' max_price='0' %}" class="text-muted p-1">Search In Lahore</a>
-      <a href="{% url 'search' category='None' city='Islamabad' min_price='0' max_price='0' %}" class="text-muted p-1">Search In Islamabad</a>
-      <a href="{% url 'search' category='None' city='Karachi' min_price='0' max_price='0' %}" class="text-muted p-1">Search In Karachi</a>
-      <a href="{% url 'search' category='None' city='Gujranwala' min_price='0' max_price='0' %}" class="text-muted p-1">Search In Gujranwala</a>
-    </div>
-
-    <div class="list-group list-group-flush col-lg-4 col-md-6 col-xs-12 col-sm-12 search-options">
-      <i class="fas text-dark fa-map-marked fa-2x"></i>
-      <label class="utility-heading">
-        Search By Popular Area
-      </label>
-      <a href="{% url 'search' category='None' city='Lahore' min_price='0' max_price='0' %}" class="text-muted p-1">Search In Johar Town, Lahore</a>
-      <a href="{% url 'search' category='None' city='Lahore' min_price='0' max_price='0' %}" class="text-muted p-1">Search In Bahria Town. Islamabad</a>
-      <a href="{% url 'search' category='None' city='Lahore' min_price='0' max_price='0' %}" class="text-muted p-1">Search In K-Town, Karachi</a>
-      <a href="{% url 'search' category='None' city='Lahore' min_price='0' max_price='0' %}" class="text-muted p-1">Search In Gujranwala</a>
-    </div>
-  </div>
-</div>
-
-
 
 
 
@@ -260,10 +228,22 @@
       
     </div>
 
+    <div id="demo" class="carousel slide" data-ride="carousel" style="width: 100%;">
+
+ 
+    
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
     <div class="row row-fads justify-content-center">
 
       {% for outer_key, outer_value in loc_based_details.items %}
-      <div class="column">
+      {% if forloop.counter0 == 4 %}
+    </div></div>
+    <div class="carousel-item">
+      <div class="row row-fads justify-content-center">
+      {% endif %}
+      <div class="column" style="margin-left: 20px; margin-right: 20px;">
         
           <div class="card card-featured" >
             {% for key, value in loc_based_images.items %}
@@ -294,7 +274,7 @@
               </label> 
               
               <label class="ad-description">
-                {{ location }}
+                <i class="fas fa-map-marker-alt mr-2"></i>{{ location }}
               </label>
               
               
@@ -306,6 +286,68 @@
       </div>
 
       {% endfor %}
+      </div>
+      </div>
+        <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <div class="control-box-left"><span class="carousel-control-prev-icon"></span></div>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <div class="control-box-right">
+    <span class="carousel-control-next-icon"></span>
+  </div>
+  </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="jumbotron utility">
+  <div class="row justify-content-center m-0 p-0">
+    <div class="col-12 mt-2 mb-3 pr-4 pl-4">
+      <div>
+          <h3 style="margin: 0px 0px 10px 0px;">
+            Quick Links
+          </h3>
+
+  </div>
+    
+  </div>
+  </div>
+
+  <div class="row justify-content-left">
+
+
+    <div class="list-group list-group-flush col-lg-4 col-md-6 col-xs-12 col-sm-12 search-options">
+      <label class="utility-heading">
+        Search By Category
+      </label>
+      <a href="{% url 'search' category='Banquet Hall' city='None' min_price='0' max_price='0' %}" class="p-1">Search Banquet Halls</a>
+      <a href="{% url 'search' category='Marquee' city='None' min_price='0' max_price='0' %}" class="p-1">Search Marquees</a>
+      <a href="{% url 'search' category='Farmhouse' city='None' min_price='0' max_price='0' %}" class="p-1">Search Farmhouses</a>
+      <a href="{% url 'search' category='Hotel Hall' city='None' min_price='0' max_price='0' %}" class="p-1">Search Hotel Halls</a>
+
+    </div>
+
+    <div class="list-group list-group-flush col-lg-4 col-md-6 col-xs-12 col-sm-12 search-options">
+      <label class="utility-heading">
+        Search By City
+      </label>
+      <a href="{% url 'search' category='None' city='Lahore' min_price='0' max_price='0' %}" class="p-1">Search In Lahore</a>
+      <a href="{% url 'search' category='None' city='Islamabad' min_price='0' max_price='0' %}" class="p-1">Search In Islamabad</a>
+      <a href="{% url 'search' category='None' city='Karachi' min_price='0' max_price='0' %}" class="p-1">Search In Karachi</a>
+      <a href="{% url 'search' category='None' city='Gujranwala' min_price='0' max_price='0' %}" class="p-1">Search In Gujranwala</a>
+    </div>
+
+    <div class="list-group list-group-flush col-lg-4 col-md-6 col-xs-12 col-sm-12 search-options">
+      <label class="utility-heading">
+        Search By Popular Area
+      </label>
+      <a href="{% url 'search' category='None' city='Lahore' min_price='0' max_price='0' %}" class="p-1">Search In Johar Town, Lahore</a>
+      <a href="{% url 'search' category='None' city='Lahore' min_price='0' max_price='0' %}" class="p-1">Search In Bahria Town. Islamabad</a>
+      <a href="{% url 'search' category='None' city='Lahore' min_price='0' max_price='0' %}" class="p-1">Search In K-Town, Karachi</a>
+      <a href="{% url 'search' category='None' city='Lahore' min_price='0' max_price='0' %}" class="p-1">Search In Gujranwala</a>
     </div>
   </div>
 </div>

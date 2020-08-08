@@ -1,24 +1,64 @@
-                        <div class="col-md-12">
-                            <div class="pull-right"><label class="label label-danger">{{rec.status}}</label> </div>
-                            <span style="margin-right:3.5em;"><strong>Views</strong></span> {{rec.views}}
-                            <span style="margin-left: 4em; margin-right: 6em;"><strong>Rating</strong></span>
-                            {{rec.rating}}<br>
-                            <span style="margin-right:2em;"><strong>Featured</strong></span> {{rec.featured}}
-                            <span style="margin-left: 3em; margin-right: 3em;"><strong>Expire Date</strong></span>
-                            {{rec.expiryDate}}<br><br>
-                            <a data-placement="top" id="link" class="btn btn-success btn-xs glyphicon glyphicon-open"
-                                href="{% url 'display' rec.id %}" title="View"></a>
-                            <a data-placement="top" class="btn btn-info  btn-xs glyphicon glyphicon-edit"
-                                href="{% url 'edit' rec.id %}" title="edit"></a>
-                            <a data-placement="top" class="btn btn-danger  btn-xs glyphicon glyphicon-trash"
-                                href="{% url 'delete' rec.id %}" title="Delete"></a>
-                            <a data-placement="top" class="btn btn-danger  btn-xs glyphicon glyphicon-share"
-                                onclick="copyToClipboard('127.0.0.1:8000/venue/{{rec.id}}/')" title="Share"></a>
-                            <a data-placement="top" class="btn btn-danger  btn-xs glyphicon glyphicon-stop"
-                                href="{% url 'deactivate' rec.id %}" title="Deactivate"></a>
-
-                            </a>
-                        </div>
-                        <div class="col-md-12">
-                            Ad made on: {{rec.postDate}}
-                        </div>
+<div class="jumbotron jumbotron-fluid featured-ads-container">
+    <div class="row justify-content-center m-0 p-0">
+  
+      <div class="col-12 mt-5 mb-3 pr-4 pl-4">
+          <div>
+              <h3 style="margin: 0px 0px 10px 0px;">
+                Ads for {{location}}
+              </h3>
+              <a class="featured-ads-label pull-right float-right" href="#">
+          View all ads for {{location}} >>
+        </a>
+      </div>
+        
+      </div>
+  
+      <div class="row row-fads justify-content-center">
+  
+        {% for outer_key, outer_value in loc_based_details.items %}
+        <div class="column">
+          
+            <div class="card card-featured" >
+              {% for key, value in loc_based_images.items %}
+            {% if outer_key == key %}
+              <div class="image-container">
+                <a href="{% url 'display' outer_key %}" class="text-dark">
+                  <span class="badge-feature" style="background: blue;">{{ location }}</span>
+                <img {% if value.image %} src="{{ value.image.url }}" {% else %}
+                  src="/media/extra/2.jpg" {% endif %} class="card-img-top" >
+                </a>
+              </div>
+              {% endif %}
+              {% endfor %}
+  
+              <div class="card-body text-center">
+                <a href="{% url 'display' outer_key %}" class="text-dark">
+                <label class="ad-title">
+                  {{outer_value.title}} 
+                </label></a><br>
+                <label class="ad-price">
+                  {% for key, value in loc_based_prices.items %}
+                {% if outer_key == key %}
+  
+                  <span>Rs </span>{{value}}<span> per head</span> 
+  
+                  {% endif %}
+                  {% endfor %}
+                </label> 
+                
+                <label class="ad-description">
+                  <i class="fas fa-map-marker-alt mr-2"></i>{{ location }}
+                </label>
+                
+                
+                
+  
+              </div>
+            </div>
+          
+        </div>
+  
+        {% endfor %}
+      </div>
+    </div>
+  </div>
